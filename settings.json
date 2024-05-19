@@ -14,6 +14,8 @@
     ],
     "base_local_dir": "./",
     "sudo_path": "/usr/local/bin/sudo",
+    "cc_vms": [
+    ],
     "device_index": 1,
     "logging": {
         "log_level": "DEBUG",

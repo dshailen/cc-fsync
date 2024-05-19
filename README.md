@@ -43,7 +43,7 @@ The retrieved files from the CC VMs will be stored under separate folders with C
     ├── settings.json
     ├── setup.py
     └── src
-        └── cc-fsync
+        └── cc_fsync
             ├── __init__.py
             ├── __main__.py
             └── sync.py
@@ -71,16 +71,27 @@ The retrieved files from the CC VMs will be stored under separate folders with C
       "interval": 60,
       "remote_paths": [
          "/sc/run",
-         "/etc/janus"
+         "/etc/janus",
+         "/etc/nimbus"
       ],
-      "base_local_dir": "/"
+      "base_local_dir": "./",
+      "sudo_path": "/usr/local/bin/sudo",
+      "cc_vms": [
+      ],
+      "device_index": 1,
+      "logging": {
+         "log_level": "DEBUG",
+         "log_file": "cc-fsync.log",
+         "max_bytes": 10485760,
+         "backup_count": 5
+      }
    }
 ```
 
 ## Usage
 ### To run the script, execute the following command:
    ```sh
-   python -m cc-fsync
+   python -m cc_fsync --background
 ```
 ### When running under AWS, attach and IAM role with the following rules
 ```json
