@@ -51,7 +51,8 @@ if CONCURRENCY_MODEL == 'gevent':
     monkey.patch_all()
 
 # Constants
-AWS_METADATA_URL = 'http://169.254.169.254/latest/api/token'
+AWS_TOKEN_URL = 'http://169.254.169.254/latest/api/token'
+AWS_METADATA_URL = 'http://169.254.169.254/latest/meta-data/'
 AWS_METADATA_HEADERS = {'X-aws-ec2-metadata-token-ttl-seconds': '21600'}
 
 
@@ -103,7 +104,7 @@ def get_aws_metadata_token():
     Get the AWS metadata token for IMDSv2
     """
     try:
-        response = requests.put(AWS_METADATA_URL, headers=AWS_METADATA_HEADERS, timeout=1)
+        response = requests.put(AWS_TOKEN_URL, headers=AWS_METADATA_HEADERS, timeout=1)
         if response.status_code == 200:
             return response.text
         logger.info("Failed to get AWS metadata token: %s %s", response.status_code, response.text)
