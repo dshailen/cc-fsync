@@ -27,37 +27,20 @@ The retrieved files from the CC VMs will be stored under separate folders with C
 
 ## Installation
 
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/dshailen/cc-fsync.git
-
-2. **Create and activate a virtual environment (optional but recommended)**:
+1. **Create and activate a virtual environment (optional but recommended)**:
    ```sh
    python3 -m venv venv
    source venv/bin/activate
+2. **Clone the repository**:
+   ```sh
+   git clone https://github.com/dshailen/cc-fsync.git
    cd cc-fsync
-   cc-fsync]$ tree
-    .
-    ├── README.md
-    ├── requirements.txt
-    ├── settings.json
-    ├── setup.py
-    └── src
-        └── cc_fsync
-            ├── __init__.py
-            ├── __main__.py
-            └── sync.py
-    
-    2 directories, 7 files
-
 3. **Install the dependencies**
    ```sh
    pip install -r requirements.txt
-
 4. **Install cc-fsync modules**
    ```sh
    pip install -e .
-
 4. **Creating a settings file (settings.json)**
   ```json
    {
@@ -86,6 +69,7 @@ The retrieved files from the CC VMs will be stored under separate folders with C
          "backup_count": 5
       }
    }
+```
 
 ## Usage
 ### To run the script, execute the following command:
