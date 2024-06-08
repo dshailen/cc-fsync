@@ -49,7 +49,7 @@ The retrieved files from the CC VMs will be stored under separate folders with C
             └── sync.py
     
     2 directories, 7 files
-```
+
 3. **Install the dependencies**
    ```sh
    pip install -r requirements.txt
@@ -86,7 +86,6 @@ The retrieved files from the CC VMs will be stored under separate folders with C
          "backup_count": 5
       }
    }
-```
 
 ## Usage
 ### To run the script, execute the following command:
